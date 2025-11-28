@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieExpress - Food Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Foodie<span>Express</span></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeMenu"></i>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" id="showMenu"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fastest Food Delivery in Your City</h1>
+                <p>Delicious food delivered to your doorstep. Order your favorite meals from the best restaurants in town.</p>
+                <div class="cta-buttons">
+                    <a href="#menu" class="btn btn-primary">Order Now</a>
+                    <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877039348bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Delicious Food">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="menu">
+        <div class="container">
+            <h2 class="section-title">Food Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-pizza-slice"></i>
+                    <h3>Pizza</h3>
+                    <p>Delicious pizzas with various toppings</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-hamburger"></i>
+                    <h3>Burgers</h3>
+                    <p>Juicy burgers with fresh ingredients</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-ice-cream"></i>
+                    <h3>Desserts</h3>
+                    <p>Sweet treats to satisfy your cravings</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    <h3>Drinks</h3>
+                    <p>Refreshing beverages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Items -->
+    <section class="popular-items">
+        <div class="container">
+            <h2 class="section-title">Popular Items</h2>
+            <div class="menu-grid">
+                <!-- Menu items will be added by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" id="services">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick delivery to your doorstep</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Fresh Food</h3>
+                    <p>100% fresh ingredients</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Best Quality</h3>
+                    <p>Premium quality food</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"The food was delicious and delivered on time. Highly recommended!"</p>
+                    <div class="customer">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer">
+                        <h4>Sarah Johnson</h4>
+                    </div>
+                </div>
+                <!-- More testimonials can be added -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>FoodieExpress</h3>
+                    <p>Delivering happiness to your doorstep with our delicious food.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@foodieexpress.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodieExpress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
