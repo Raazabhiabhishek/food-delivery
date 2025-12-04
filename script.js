@@ -62,7 +62,7 @@ const menuItems = [
         id: 1,
         name: 'Margherita Pizza',
         description: 'Classic pizza with tomato sauce, mozzarella, and basil',
-        price: '$12.99',
+        price: '₹120 rupees',
         image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
         category: 'pizza'
     },
@@ -70,7 +70,7 @@ const menuItems = [
         id: 2,
         name: 'Cheeseburger',
         description: 'Juicy beef patty with cheddar, lettuce, and special sauce',
-        price: '$9.99',
+        price: '₹80 rupees',
         image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
         category: 'burger'
     },
@@ -78,7 +78,7 @@ const menuItems = [
         id: 3,
         name: 'Caesar Salad',
         description: 'Fresh romaine lettuce with Caesar dressing and croutons',
-        price: '$8.99',
+        price: '₹75 rupees',
         image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
         category: 'salad'
     },
@@ -86,7 +86,7 @@ const menuItems = [
         id: 4,
         name: 'Pasta Carbonara',
         description: 'Spaghetti with creamy sauce, pancetta, and parmesan',
-        price: '$14.99',
+        price: '₹80 rupees',
         image: 'https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
         category: 'pasta'
     },
@@ -94,7 +94,7 @@ const menuItems = [
     id: 5,
     name: 'Chocolate Lava Cake',
     description: 'Warm chocolate cake with a molten center, served with ice cream',
-    price: '$7.99',
+    price: '₹95 rupees',
     image: 'https://www.foodandwine.com/thmb/JzCnKoNjLkG2nRwVSdFZoR2pEAs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/molten-chocolate-cake-FT-RECIPE0220-0a33d7d0ab0c45588f7bfe742d33a9bc.jpg',
     category: 'dessert'
 }
@@ -104,7 +104,7 @@ const menuItems = [
     id: 6,
     name: 'Iced Coffee',
     description: 'Chilled coffee with milk and sweetener',
-    price: '$4.99',
+    price: '₹65 rupees',
     image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg',
     category: 'drink'
 }
