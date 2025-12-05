@@ -4,6 +4,7 @@ const closeMenu = document.getElementById('closeMenu');
 const navLinks = document.querySelector('.nav-links');
 const navbar = document.querySelector('.navbar');
 
+
 // Mobile menu toggle
 showMenu.addEventListener('click', () => {
     navLinks.classList.add('active');
@@ -140,7 +141,7 @@ function displayMenuItems(items) {
 }
 
 // Add to Cart Function
-function addToCart(e) {
+/*function addToCart(e) {
     const button = e.target;
     const id = button.getAttribute('data-id');
     const item = menuItems.find(item => item.id === parseInt(id));
@@ -156,7 +157,78 @@ function addToCart(e) {
     
     // In a real app, you would add the item to a shopping cart
     console.log('Added to cart:', item);
+}*/
+// ================= CART SYSTEM =================
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Update cart count
+function updateCartCount() {
+    document.getElementById("cartCount").textContent = cart.length;
 }
+updateCartCount();
+
+// Add to cart
+function addToCart(e) {
+    const id = e.target.getAttribute("data-id");
+    const item = menuItems.find(item => item.id == id);
+
+    cart.push(item);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+
+    // Button Animation
+    e.target.textContent = "Added!";
+    e.target.style.backgroundColor = "#4CAF50";
+
+    setTimeout(() => {
+        e.target.textContent = "Add to Cart";
+        e.target.style.backgroundColor = "";
+    }, 1500);
+}
+
+// Open & Close Cart Sidebar
+const cartSidebar = document.getElementById("cartSidebar");
+document.querySelector(".cart-icon").addEventListener("click", () => {
+    displayCartItems();
+    cartSidebar.classList.add("active");
+});
+
+document.getElementById("closeCart").addEventListener("click", () => {
+    cartSidebar.classList.remove("active");
+});
+
+// Display cart items
+function displayCartItems() {
+    const cartItemsDiv = document.getElementById("cartItems");
+    cartItemsDiv.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        const price = parseInt(item.price.replace("₹", "").replace("rupees", "").trim());
+        total += price;
+
+        cartItemsDiv.innerHTML += `
+            <div class="cart-item">
+                <span>${item.name}</span>
+                <span>₹${price}</span>
+                <button onclick="removeItem(${index})">Remove</button>
+            </div>
+        `;
+    });
+
+    document.getElementById("cartTotal").textContent = total;
+}
+
+// Remove cart item
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    displayCartItems();
+}
+
 
 // Initialize the page
 function init() {
