@@ -916,5 +916,125 @@ img {
     cursor: pointer;
     border-radius: 5px;
 }
+/* ================= BURGER LOADER ================= */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffedd5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+    transition: opacity 0.8s ease;
+}
+
+.burger-loader {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    animation: bounce 1s infinite alternate ease-in-out;
+}
+
+.burger-loader .bun {
+    width: 120px;
+    height: 40px;
+    background: #f4a460;
+    border-radius: 50px;
+}
+
+.burger-loader .bun.top {
+    border-radius: 50px 50px 20px 20px;
+}
+
+.burger-loader .bun.bottom {
+    border-radius: 20px 20px 50px 50px;
+    margin-top: 10px;
+}
+
+.burger-loader .patty {
+    width: 120px;
+    height: 25px;
+    background: #8b4513;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.burger-loader .cheese {
+    width: 120px;
+    height: 15px;
+    background: #ffcc00;
+    border-radius: 10px;
+}
+
+.loader-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #c2410c;
+    font-weight: 600;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* Hide loader smoothly */
+#loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ================= STEAM EFFECT ================= */
+.steam {
+    position: absolute;
+    top: 35%;
+    display: flex;
+    gap: 10px;
+}
+
+.steam span {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    opacity: 0;
+    animation: steamRise 2s infinite ease-in-out;
+}
+
+.steam span:nth-child(1) { animation-delay: 0s; }
+.steam span:nth-child(2) { animation-delay: 0.3s; }
+.steam span:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes steamRise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.8);
+    }
+}
+
+/* Mobile steam size */
+@media (max-width: 600px) {
+    .steam {
+        top: 40%;
+        gap: 6px;
+    }
+    .steam span {
+        width: 8px;
+        height: 8px;
+    }
+}
+
 
 
